@@ -108,4 +108,5 @@ sudo apt-get install asciinema
 ## 参考资料
 
 [Linux终端录制](https://www.jianshu.com/p/0e83b331aec4)
+
 [2015-linux-public-songyawen/exp2/vim学习.md](https://github.com/CUCCS/2015-linux-public-songyawen/blob/master/exp2/vim%E5%AD%A6%E4%B9%A0.md)
