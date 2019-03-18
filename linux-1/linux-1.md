@@ -9,7 +9,7 @@
 
 设备
 * 主机：win10
-* 虚拟机：ubuntu-18.04.1-server-amd64
+* 虚拟机：ubuntu-18.04-server-amd64
 
 网络配置
 * NAT
@@ -124,6 +124,8 @@
   ```
   cd ~/cd && find . -type f -print0 | xargs -0 md5sum > md5sum.txt
   ```
+  【注】：```sudo chmod 777 文件```是一种很粗暴的方式，正确做法是使用root用户身份执行```find . -type f -print0 | xargs -0 md5sum > md5sum.txt```。
+
 
   ![](错误.PNG)
 
@@ -175,6 +177,8 @@
 
 ## 文件对比
 * 使用的软件是[在线的编辑器](http://mergely.com/editor)。
+
+【注】：关于文本比对工具:```CLI```方式推荐```vimdiff```。如果是```GUI```方式推荐```meld```；
   
   * 选择所在地区，跳过语言的选择
 
