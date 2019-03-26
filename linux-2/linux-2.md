@@ -14,14 +14,14 @@
 
 ## 在本地完成asciinema auth，并在asciinema关联本地账号和在线账号
 
-```
+```bash
 # 安装。
 sudo apt install asciinema
 # 关联。输入以下指令之后，会返回一个网址。于宿主机打开该网址，关联成功了。
 asciinema auth
 ```
 但是在第一节视频录制结束之后，发现录制的结果无法上传到网页上。提示信息显示为不再支持已安装的版本，需要升级到更高版本。找到解决方案：使用```sudo apt install asciinema```安装的只是0.9版本，功能不全。需要重新使用下列方式安装。
-```
+```bash
 sudo apt-add-repository ppa:zanchey/asciinema
 sudo apt-get update
 sudo apt-get install asciinema
