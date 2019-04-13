@@ -9,9 +9,31 @@ before_install:
     - tar --xz -xvf shellcheck-"${scversion}".linux.x86_64.tar.xz
     - sudo cp shellcheck-"${scversion}"/shellcheck /usr/bin/
     - /usr/bin/shellcheck --version
+    - sudo apt install p7zip-full
+    - wget "http://sec.cuc.edu.cn/huangwei/course/LinuxSysAdmin/exp/chap0x04/web_log.tsv.7z"
+    - 7z x -olinux_4 web_log.tsv.7z  
 
 script:
   - bash test.sh
+  - cd linux_4
+  - bash test1.sh -h
+  - bash test1.sh -i test.jpg -o output.jpg -cq 50
+  - bash test1.sh -i test.jpg -o output.jpg -cr 50
+  - bash test1.sh -i test.jpg -o output.jpg -w 'ZhangRuoxu'
+  - bash test1.sh -i test.jpg -p a
+  - bash test1.sh -i test.jpg -s a
+  - bash test2.sh -h
+  - bash test2.sh -asdf
+  - bash test2.sh -a
+  - bash test2.sh -p
+  - bash test2.sh -n
+  - bash test3.sh -h
+  - bash test3.sh -a
+  - bash test3.sh -b
+  - bash test3.sh -c
+  - bash test3.sh -d
+  - bash test3.sh -e
+  - bash test3.sh -f /history/skylab/skylab.html
 
 after_script:
   - /usr/bin/shellcheck test.sh
